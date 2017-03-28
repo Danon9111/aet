@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.cognifide.aet.worker.drivers;
+package com.cognifide.aet.worker.drivers.firefox;
 
 /*
  * Copyright 2007-2009 Selenium committers

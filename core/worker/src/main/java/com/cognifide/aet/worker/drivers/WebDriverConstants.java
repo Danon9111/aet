@@ -22,11 +22,11 @@ package com.cognifide.aet.worker.drivers;
  */
 public final class WebDriverConstants {
 
-  static final String NAME = "name";
+  public static final String NAME = "name";
 
-  static final String NAME_LABEL = "Name";
+  public static final String NAME_LABEL = "Name";
 
-  static final String PATH = "path";
+  public static final String PATH = "path";
 
   private WebDriverConstants() {
     // restrict instantiation

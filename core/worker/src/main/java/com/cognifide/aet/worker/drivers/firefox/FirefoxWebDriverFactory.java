@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.cognifide.aet.worker.drivers;
+package com.cognifide.aet.worker.drivers.firefox;
 
 import com.cognifide.aet.job.api.collector.HttpRequestBuilderFactory;
 import com.cognifide.aet.job.api.collector.ProxyServerWrapper;
@@ -91,7 +91,7 @@ public class FirefoxWebDriverFactory implements WebDriverFactory {
       fp.setAssumeUntrustedCertificateIssuer(false);
       capabilities.setCapability(AetFirefoxDriver.PROFILE, fp);
 
-      return new WebCommunicationWrapperImpl(getFirefoxDriver(fp, capabilities), proxyServer, builderFactory.createInstance());
+      return new FirefoxCommunicationWrapperImpl(getFirefoxDriver(fp, capabilities), proxyServer, builderFactory.createInstance());
     } catch (Exception e) {
       throw new WorkerException(e.getMessage(), e);
     }
@@ -105,7 +105,7 @@ public class FirefoxWebDriverFactory implements WebDriverFactory {
       FirefoxProfile fp = getFirefoxProfile();
       capabilities.setCapability(AetFirefoxDriver.PROFILE, fp);
 
-      return new WebCommunicationWrapperImpl(getFirefoxDriver(fp, capabilities), null, builderFactory.createInstance());
+      return new FirefoxCommunicationWrapperImpl(getFirefoxDriver(fp, capabilities), null, builderFactory.createInstance());
     } catch (Exception e) {
       throw new WorkerException(e.getMessage(), e);
     }
