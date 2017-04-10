@@ -63,7 +63,7 @@ public class CollectorMessageListenerImpl extends AbstractTaskMessageListener {
   @Property(name = PRODUCER_QUEUE_NAME, label = "Producer queue name", value = "AET.collectorResults")
   private String producerQueueName;
 
-  @Property(name = WEB_DRIVER_NAME, label = "Web Driver name", value = "ff")
+  @Property(name = WEB_DRIVER_NAME, label = "Web Driver name", value = "chrome")
   private String webDriverName;
 
   @Reference

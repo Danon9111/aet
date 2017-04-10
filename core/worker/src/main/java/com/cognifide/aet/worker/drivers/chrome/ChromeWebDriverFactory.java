@@ -49,7 +49,7 @@ import org.osgi.framework.Constants;
 @Properties({@Property(name = Constants.SERVICE_VENDOR, value = "Cognifide Ltd")})
 public class ChromeWebDriverFactory implements WebDriverFactory {
 
-  private static final String DEFAULT_DRIVER_PATH = "/opt/aet/chrome/chromedriver";
+  private static final String DEFAULT_DRIVER_PATH = "/usr/bin/chromedriver";
   private static final String DEFAULT_BROWSER_NAME = "chrome";
 
   @Reference
