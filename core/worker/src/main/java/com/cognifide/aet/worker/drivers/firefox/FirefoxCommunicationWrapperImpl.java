@@ -1,5 +1,5 @@
 /**
- * Automated Exploratory Tests
+ * AET
  *
  * Copyright (C) 2013 Cognifide Limited
  *
@@ -21,7 +21,7 @@ import com.google.common.base.Function;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.Ordering;
 
-import com.cognifide.aet.job.api.collector.HttpRequestBuilder;
+import com.cognifide.aet.job.api.collector.HttpRequestExecutor;
 import com.cognifide.aet.job.api.collector.JsErrorLog;
 import com.cognifide.aet.job.api.collector.ProxyServerWrapper;
 import com.cognifide.aet.job.api.collector.WebCommunicationWrapper;
@@ -51,12 +51,12 @@ public class FirefoxCommunicationWrapperImpl implements WebCommunicationWrapper 
 
   private final ProxyServerWrapper proxyServer;
 
-  private final HttpRequestBuilder builder;
+  private final HttpRequestExecutor requestExecutor;
 
-  public FirefoxCommunicationWrapperImpl(WebDriver webDriver, ProxyServerWrapper server, HttpRequestBuilder builder) {
+  public FirefoxCommunicationWrapperImpl(WebDriver webDriver, ProxyServerWrapper server, HttpRequestExecutor requestExecutor) {
     this.webDriver = webDriver;
     this.proxyServer = server;
-    this.builder = builder;
+    this.requestExecutor = requestExecutor;
   }
 
   @Override
@@ -82,8 +82,8 @@ public class FirefoxCommunicationWrapperImpl implements WebCommunicationWrapper 
   }
 
   @Override
-  public HttpRequestBuilder getHttpRequestBuilder() {
-    return builder;
+  public HttpRequestExecutor getHttpRequestExecutor() {
+    return requestExecutor;
   }
 
 }

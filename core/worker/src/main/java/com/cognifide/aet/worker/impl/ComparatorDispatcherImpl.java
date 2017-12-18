@@ -1,5 +1,5 @@
 /**
- * Automated Exploratory Tests
+ * AET
  *
  * Copyright (C) 2013 Cognifide Limited
  *
@@ -77,6 +77,7 @@ public class ComparatorDispatcherImpl implements ComparatorDispatcher {
     } finally {
       timer.finishAndLog(comparator.getType());
       comparator.setStepResult(comparisonResult);
+      comparator.setStatistics(timer.toStatistics());
     }
     return comparator;
   }

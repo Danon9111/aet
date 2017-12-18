@@ -1,5 +1,5 @@
 /**
- * Automated Exploratory Tests
+ * AET
  *
  * Copyright (C) 2013 Cognifide Limited
  *
@@ -65,4 +65,24 @@ public class ParametersValidatorTest {
     ParametersValidator.checkParameter(false, "Error");
   }
 
+  @Test
+  public void testCheckAtLeastOneNotBlank_whenAtLeastOneInputNotEmpty_validationPassed() throws Exception {
+    ParametersValidator.checkAtLeastOneNotBlank("Error", "param-a");
+    ParametersValidator.checkAtLeastOneNotBlank("Error", "", "param-b");
+    ParametersValidator.checkAtLeastOneNotBlank("Error", "", "", "param-c");
+    ParametersValidator.checkAtLeastOneNotBlank("Error", "", "param-b", "");
+    ParametersValidator.checkAtLeastOneNotBlank("Error", "param-a", "", "");
+    ParametersValidator.checkAtLeastOneNotBlank("Error", "param-a", "param-b", "param-c");
+  }
+
+  @Test(expected = ParametersException.class)
+  public void testCheckAtLeastOneNotBlank_whenEmptyParameterArePassed_expectException() throws Exception {
+    ParametersValidator.checkAtLeastOneNotBlank("Error", "", "");
+  }
+
+
+  @Test(expected = ParametersException.class)
+  public void testCheckAtLeastOneNotBlank_whenNullParameterArePassed_expectException() throws Exception {
+    ParametersValidator.checkAtLeastOneNotBlank("Error", null, "");
+  }
 }

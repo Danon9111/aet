@@ -1,12 +1,12 @@
 #### Status Codes Collector
 
-Status Codes Collector is responsible for collecting status codes of links to resources on the page under given URL.
+Status Codes Collector is responsible for collecting status codes returned by resources on the processed page.
 
 Module name: **status-codes**
 
-| ! Important information |
-| :---------------------- |
-| In order to use this collector *[[proxy|SuiteStructure#proxy]]* must be used. |
+**Important information**
+
+In order to use this modifier it must be declared before the open module in the definition of the test suite XML and [[proxy|SuiteStructure#proxy]] must be used.
 
 ##### Parameters
 

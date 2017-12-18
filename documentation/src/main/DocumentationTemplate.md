@@ -4,6 +4,8 @@
 
 #include "wiki/Dictionary.md"
 
+#include "wiki/HowToExtendAET.md"
+
 # How To Use
 
 #include "wiki/EnvironmentSetup.md"
@@ -54,6 +56,8 @@
 
 #include "wiki/HideModifier.md"
 
+#include "wiki/ExecuteJavaScriptModifier.md"
+
 #include "wiki/LoginModifier.md"
 
 #include "wiki/ResolutionModifier.md"
@@ -61,6 +65,12 @@
 #include "wiki/SleepModifier.md"
 
 #include "wiki/WaitForPageLoadedModifier.md"
+
+#include "wiki/WaitForElementToBeVisibleModifier.md"
+
+#include "wiki/WaitForImageCompletionModifier.md"
+
+#include "wiki/ExecuteJavaScriptModifier.md"
 
 #include "wiki/Comparators.md"
 
@@ -128,6 +138,8 @@
 
 #include "wiki/ClientApplication.md"
 
+#include "wiki/ClientScripts.md"
+
 #include "wiki/TestExecutor.md"
 
 #include "wiki/Runner.md"
@@ -147,5 +159,7 @@
 #include "wiki/Logs.md"
 
 #include "wiki/WhatsNew.md"
+
+#include "wiki/FAQ.md"
 
 #include "wiki/AetSuiteMigration.md"

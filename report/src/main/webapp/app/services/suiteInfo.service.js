@@ -1,5 +1,5 @@
 /*
- * Automated Exploratory Tests
+ * AET
  *
  * Copyright (C) 2013 Cognifide Limited
  *
@@ -45,11 +45,13 @@ define(['angularAMD', 'metadataService'], function (angularAMD) {
 				suite = metadataService.getSuite();
 				suiteInfo = {
 					correlationId: suite.correlationId,
+					patternCorrelationId: suite.patternCorrelationId,
 					company: suite.company,
 					project: suite.project,
 					name: suite.name,
 					version: suite.version,
-					lastUpdate: suite.runTimestamp.value
+					lastUpdate: suite.runTimestamp,
+					duration: suite.statistics ? suite.statistics.duration : 'Not available'
 				};
 			}
 			return suiteInfo;

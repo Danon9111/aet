@@ -1,6 +1,7 @@
 * [[Getting Started|Home]]
     * [[AET In 10 Minutes|AETIn10Minutes]]
     * [[Dictionary|Dictionary]]
+    * [[How To Extend AET|HowToExtendAET]]
 
 * How To Use
     * [[Environment Setup|EnvironmentSetup]]
@@ -32,6 +33,9 @@
             * [[Resolution|ResolutionModifier]]
             * [[Sleep|SleepModifier]]
             * [[Wait For Page Loaded|WaitForPageLoadedModifier]]
+            * [[Execute Java Script|ExecuteJavaScriptModifier]]
+            * [[Wait For Element To Be Visible|WaitForElementToBeVisibleModifier]]
+            * [[Wait For Image Completion|WaitForImageCompletionModifier]]
         * [[Comparators|Comparators]]
             * [[Accessibility|AccessibilityComparator]]
             * [[Client Side Performance|ClientSidePerformanceComparator]]
@@ -66,6 +70,7 @@
 * [[How It Works|HowItWorks]]
     * [[System Components|SystemComponents]]
         * [[Client Application|ClientApplication]]
+        * [[Client Scripts|ClientScripts]]
         * [[Test Executor|TestExecutor]]
         * [[Runner|Runner]]
         * [[Worker|Worker]]
@@ -76,6 +81,8 @@
     * [[Database Structure|DatabaseStructure]]
     * [[Logs|Logs]]
 * [[What's new|WhatsNew]]
-    * [[Migrate AET suite from 1.3.2 to 2.0|AetSuiteMigration]]
+    * [[Migrate AET suite|AetSuiteMigration]]
+* [[FAQ|FAQ]]
 * Releases
     * [[AET 2.0.0|Documentation-2.0.0]]
+    * [[AET 2.1.0|Documentation-2.1.0]]

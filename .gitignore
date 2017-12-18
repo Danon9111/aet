@@ -22,6 +22,11 @@ atlassian-ide-plugin.xml
 .DS_Store
 **/generated/
 
+### AET integration tests
+# this partial is generated from template
+/integration-tests/test-suite/partials/executejavascript.xml
+/integration-tests/test-suite/partials/loginmodifier.xml
+
 ### AET report web application
 # node instance for frontend-maven-plugin
 /report/src/main/webapp/node
@@ -40,6 +45,8 @@ atlassian-ide-plugin.xml
 /documentation/src/main/node
 # npm packages
 /documentation/src/main/node_modules/
+# auto-generated file
+/documentation/src/main/markdown.json
 
 # aet-vagrant
 /vagrant/.vagrant

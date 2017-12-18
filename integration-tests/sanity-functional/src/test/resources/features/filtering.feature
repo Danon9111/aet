@@ -1,5 +1,5 @@
 #
-# Automated Exploratory Tests
+# AET
 #
 # Copyright (C) 2013 Cognifide Limited
 #
@@ -37,14 +37,14 @@ Feature: Tests Results Filtering
   Scenario: Filtering Tests Results: layout
     Given I have opened sample tests report page
     When I search for tests containing "layout"
-    Then There are 9 tiles visible
-    And Statistics text contains "9 ( 3 / 0 / 6 / 0 )"
+    Then There are 13 tiles visible
+    And Statistics text contains "13 ( 3 / 0 / 10 / 0 )"
 
    Scenario: Filtering Tests Results: jserrors
     Given I have opened sample tests report page
     When I search for tests containing "jserrors"
-    Then There are 12 tiles visible
-    And Statistics text contains "12 ( 5 / 0 / 7 / 0 )"
+    Then There are 14 tiles visible
+    And Statistics text contains "14 ( 6 / 0 / 8 / 0 )"
     
   Scenario: Filtering Tests Results: source
     Given I have opened sample tests report page
@@ -61,8 +61,8 @@ Feature: Tests Results Filtering
   Scenario: Filtering Tests Results: w3c-html5
     Given I have opened sample tests report page
     When I search for tests containing "w3c-html5"
-    Then There are 7 tiles visible
-    And Statistics text contains "7 ( 1 / 1 / 5 / 0 )"
+    Then There are 8 tiles visible
+    And Statistics text contains "8 ( 1 / 1 / 6 / 0 )"
 
   Scenario: Filtering Tests Results: click-modifier
     Given I have opened sample tests report page
@@ -84,6 +84,18 @@ Feature: Tests Results Filtering
     
   Scenario: Filtering Tests Results: wait-for-page-modifier
     Given I have opened sample tests report page
-    When I search for tests containing "wait"
+    When I search for tests containing "wait-for-page-loaded"
     Then There are 2 tiles visible
     And Statistics text contains "2 ( 1 / 0 / 1 / 0 )"
+
+  Scenario: Filtering Tests Results: wait-for-element-to-be-visible-modifier
+    Given I have opened sample tests report page
+    When I search for tests containing "wait-for-element-to-be-visible"
+    Then There are 2 tiles visible
+    And Statistics text contains "2 ( 1 / 0 / 1 / 0 )"
+
+  Scenario: Filtering Tests Results: wait-for-image-completion-modifier
+    Given I have opened sample tests report page
+    When I search for tests containing "wait-for-image-completion"
+    Then There are 4 tiles visible
+    And Statistics text contains "4 ( 2 / 0 / 2 / 0 )"

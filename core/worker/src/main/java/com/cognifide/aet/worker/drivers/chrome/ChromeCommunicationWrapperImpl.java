@@ -17,7 +17,7 @@
  */
 package com.cognifide.aet.worker.drivers.chrome;
 
-import com.cognifide.aet.job.api.collector.HttpRequestBuilder;
+import com.cognifide.aet.job.api.collector.HttpRequestExecutor;
 import com.cognifide.aet.job.api.collector.JsErrorLog;
 import com.cognifide.aet.job.api.collector.ProxyServerWrapper;
 import com.cognifide.aet.job.api.collector.WebCommunicationWrapper;
@@ -26,7 +26,6 @@ import com.google.common.collect.FluentIterable;
 import com.google.common.collect.Ordering;
 import java.util.Set;
 import java.util.logging.Level;
-import javax.annotation.Nullable;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
@@ -45,13 +44,13 @@ public class ChromeCommunicationWrapperImpl implements WebCommunicationWrapper {
 
   private final ProxyServerWrapper proxyServer;
 
-  private final HttpRequestBuilder builder;
+  private final HttpRequestExecutor requestExecutor;
 
   public ChromeCommunicationWrapperImpl(WebDriver webDriver, ProxyServerWrapper server,
-      HttpRequestBuilder builder) {
+      HttpRequestExecutor requestExecutor) {
     this.webDriver = webDriver;
     this.proxyServer = server;
-    this.builder = builder;
+    this.requestExecutor = requestExecutor;
   }
 
   @Override
@@ -78,9 +77,9 @@ public class ChromeCommunicationWrapperImpl implements WebCommunicationWrapper {
         .toSortedSet(Ordering.natural());
   }
 
-  @Override
-  public HttpRequestBuilder getHttpRequestBuilder() {
-    return builder;
-  }
 
+  @Override
+  public HttpRequestExecutor getHttpRequestExecutor() {
+    return requestExecutor;
+  }
 }

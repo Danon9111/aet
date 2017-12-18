@@ -1,6 +1,6 @@
 <!--
 
-    Automated Exploratory Tests
+    AET
 
     Copyright (C) 2013 Cognifide Limited
 
@@ -55,6 +55,16 @@
                   data-html="true" data-trigger="hover"
                   data-ng-click="toolbarBottom.displayCommentModal()">
                 <i class="glyphicon glyphicon-comment"></i>
+            </span>
+
+            <span class="button button-dark button-disabled"
+                  data-ng-if="toolbarBottom.usesCrossSuitePattern"
+                  data-aet-included-comment-popover
+                  data-toggle="popover"
+                  data-content="May not be accepted because compared against another suite patterns."
+                  data-html="true"
+                  data-trigger="hover"></i>
+                Accept {{toolbarBottom.viewMode}}
             </span>
 
             <span class="button js-rebase-suite button-blue"

@@ -1,5 +1,5 @@
 /**
- * Automated Exploratory Tests
+ * AET
  *
  * Copyright (C) 2013 Cognifide Limited
  *
@@ -82,6 +82,7 @@ public class CollectorDispatcherImpl implements CollectorDispatcher {
       } finally {
         timer.finishAndLog(step.getType());
         step.setStepResult(result);
+        step.setStatistics(timer.toStatistics());
       }
     }
 

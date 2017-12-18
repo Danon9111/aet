@@ -1,6 +1,6 @@
 <%--
 
-    Automated Exploratory Tests
+    AET
 
     Copyright (C) 2013 Cognifide Limited
 
@@ -21,7 +21,9 @@
 <script>
 function hideText() {
     var hideText = document.getElementById("toHide");
+    var hideLink = document.getElementById("hide");
     hideText.style.display = 'none';
+    hideLink.style.display = 'none';
 }
 </script>
 

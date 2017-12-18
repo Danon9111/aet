@@ -1,5 +1,5 @@
 /*
- * Automated Exploratory Tests
+ * AET
  *
  * Copyright (C) 2013 Cognifide Limited
  *
@@ -22,6 +22,7 @@ define(['angularAMD'], function (angularAMD) {
       getEndpoint: function () {
         var config = {
           'getUrl': '/api/'
+          //'getUrl': 'http://aet-vagrant/api/'
         };
         return config;
       }

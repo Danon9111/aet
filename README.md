@@ -2,14 +2,16 @@
 
 [![Build Status](https://travis-ci.org/Cognifide/aet.svg?branch=master)](https://travis-ci.org/Cognifide/aet)
 [![Apache License, Version 2.0, January 2004](https://img.shields.io/github/license/cognifide/aet.svg?label=License)](http://www.apache.org/licenses/)
+[![][gitter img]][gitter]
 
-# Automated Exploratory Testing
+# AET
 <p align="center">
   <img src="https://github.com/Cognifide/aet/blob/master/misc/img/aet-logo-black.png?raw=true"
          alt="AET Logo"/>
 </p>
 
-AET (acronym formed from **A**utomated **E**xploratory **T**esting) is a system that detects changes on web sites.
+AET is a system that detects changes on web sites and performs basic page health check (like w3c 
+compliance, accessibility check and other).
 AET is designed as a flexible system that can be adapted and tailored to the regression requirements of a given project.
 The tool has been developed to aid front end client side layout regression testing of websites or portfolios. 
 In essence assessing the impact or change of a website from one snapshot to the next.
@@ -102,3 +104,7 @@ Please notice we use [ZenHub](https://www.zenhub.com/) extension to manage issue
 ## Contact and Commercial Support
 
 If you have any questions or require technical support please contact us at [aet@cognifide.com](mailto:aet@cognifide.com).
+[Gitter Chat](https://gitter.im/aet-tool/Lobby) is a way for users to chat with the AET community. Feel free to leave a message, even if we’re not around, we will definitely respond to you when available.
+
+[gitter]:https://gitter.im/aet-tool/Lobby
+[gitter img]:https://badges.gitter.im/aet-tool/aet-tool.svg

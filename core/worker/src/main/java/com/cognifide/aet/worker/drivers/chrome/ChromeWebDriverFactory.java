@@ -21,7 +21,7 @@ import static com.cognifide.aet.worker.drivers.WebDriverConstants.NAME;
 import static com.cognifide.aet.worker.drivers.WebDriverConstants.NAME_LABEL;
 import static com.cognifide.aet.worker.drivers.WebDriverConstants.PATH;
 
-import com.cognifide.aet.job.api.collector.HttpRequestBuilderFactory;
+import com.cognifide.aet.job.api.collector.HttpRequestExecutorFactory;
 import com.cognifide.aet.job.api.collector.ProxyServerWrapper;
 import com.cognifide.aet.job.api.collector.WebCommunicationWrapper;
 import com.cognifide.aet.worker.api.WebDriverFactory;
@@ -53,7 +53,7 @@ public class ChromeWebDriverFactory implements WebDriverFactory {
   private static final String DEFAULT_BROWSER_NAME = "chrome";
 
   @Reference
-  private HttpRequestBuilderFactory builderFactory;
+  private HttpRequestExecutorFactory requestExecutorFactory;
 
   @Property(name = NAME, label = NAME_LABEL, value = DEFAULT_BROWSER_NAME)
   private String name;
@@ -77,7 +77,7 @@ public class ChromeWebDriverFactory implements WebDriverFactory {
     try {
       final DesiredCapabilities capabilities = setupCapabilities();
       return new ChromeCommunicationWrapperImpl(new ChromeDriver(capabilities), null,
-          builderFactory.createInstance());
+          requestExecutorFactory.createInstance());
     } catch (Exception e) {
       throw new WorkerException(e.getMessage(), e);
     }
@@ -95,7 +95,7 @@ public class ChromeWebDriverFactory implements WebDriverFactory {
       capabilities.setCapability(CapabilityType.PROXY, proxy);
 
       return new ChromeCommunicationWrapperImpl(new ChromeDriver(capabilities), proxyServer,
-          builderFactory.createInstance());
+          requestExecutorFactory.createInstance());
     } catch (Exception e) {
       throw new WorkerException(e.getMessage(), e);
     }

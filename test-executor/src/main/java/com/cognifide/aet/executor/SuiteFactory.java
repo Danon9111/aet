@@ -1,5 +1,5 @@
 /**
- * Automated Exploratory Tests
+ * AET
  *
  * Copyright (C) 2013 Cognifide Limited
  *
@@ -96,7 +96,13 @@ class SuiteFactory {
   }
 
   private Suite suiteFromTestRun(TestSuiteRun testSuiteRun) {
-    return new Suite(testSuiteRun.getCorrelationId(), testSuiteRun.getCompany(), testSuiteRun.getProject(), testSuiteRun.getName());
+    String correlationId = testSuiteRun.getCorrelationId();
+    String company = testSuiteRun.getCompany();
+    String project = testSuiteRun.getProject();
+    String name = testSuiteRun.getName();
+    String patternCorrelationId = testSuiteRun.getPatternCorrelationId();
+
+    return new Suite(correlationId, company, project, name, patternCorrelationId);
   }
 
   private boolean comparatorMatchesCollector(CollectorStep collectorStep, ComparatorStep comparatorStep) {

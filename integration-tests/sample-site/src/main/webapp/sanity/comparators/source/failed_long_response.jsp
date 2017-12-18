@@ -1,6 +1,6 @@
 <%--
 
-    Automated Exploratory Tests
+    AET
 
     Copyright (C) 2013 Cognifide Limited
 
@@ -18,6 +18,7 @@
 
 --%>
 <%
-Thread.sleep(25000);
+// should sleep longer than timeout provided at SourceCollectorFactory.java
+Thread.sleep(45000);
 %>
 <%@ include file="/includes/basePage.jsp" %>

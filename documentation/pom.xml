@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Automated Exploratory Tests
+    AET
 
     Copyright (C) 2013 Cognifide Limited
 
@@ -24,7 +24,7 @@
   <parent>
     <artifactId>aet-root</artifactId>
     <groupId>com.cognifide.aet</groupId>
-    <version>2.0.3-SNAPSHOT</version>
+    <version>2.1.3-SNAPSHOT</version>
   </parent>
 
   <artifactId>documentation</artifactId>
@@ -50,6 +50,32 @@
                 <excludes>src/main/node/**</excludes>
                 <exclude>src/main/node_modules/**</exclude>
               </excludes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <!-- process package.json.template to insert project version -->
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.basedir}/src/main</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/src/main/resources/templates</directory>
+                  <filtering>true</filtering>
+                  <includes>
+                    <include>package.json</include>
+                  </includes>
+                </resource>
+              </resources>
             </configuration>
           </execution>
         </executions>
@@ -89,6 +115,15 @@
                 </goals>
                 <configuration>
                   <arguments>build</arguments>
+                </configuration>
+              </execution>
+              <execution>
+                <id>generates TOC</id>
+                <goals>
+                  <goal>npm</goal>
+                </goals>
+                <configuration>
+                  <arguments>run doctoc</arguments>
                 </configuration>
               </execution>
             </executions>

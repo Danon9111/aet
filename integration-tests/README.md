@@ -1,6 +1,6 @@
 ![Cognifide logo](http://cognifide.github.io/images/cognifide-logo.png)
 
-# Automated Exploratory Tests
+# AET
 <p align="center">
   <img src="https://github.com/Cognifide/aet/blob/master/misc/img/aet-logo-black.png?raw=true"
          alt="AET Logo"/>
@@ -43,17 +43,4 @@ Prerequisities:
 * sample test suite: `test-suite` executed against `sample-site` site.
 Report should be available at `report.url`
 (please configured it in `src/main/config/instance.properties` file).
-
-
-### json-test
-
-Uses AETs to compare AET's results.
-
-This suite reads the test result JSON that is available at:
-
-* [/api/metadata?company=aet&project=aet&suite=main&formatted=true](http://127.0.0.1:8181/api/metadata?company=aet&project=aet&suite=main&formatted=true)
-
-and compares it to stored pattern. The JSON comparison result is available at:
-
-* [/html/index.html?company=aet&project=aet&suite=aet-json-test#/home](http://localhost:8181/html/index.html?company=aet&project=aet&suite=aet-json-test#/home)
 
