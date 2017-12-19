@@ -38,7 +38,7 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 @Ignore
-public class AetFirefoxDriverTest {
+public class JSErrorsOnChromeWebDriverTest {
 
   private static final LogEntryToJsError ENTRY_TO_JS_ERROR = new LogEntryToJsError();
   private ChromeDriver driver;
